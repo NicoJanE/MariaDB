@@ -1,0 +1,82 @@
+# This file is part of: PHP Development Template Stack 
+# Copyright (c) 2024 Nico Jan Eelhart
+#
+# This source code is licensed under the MIT License found in the  'LICENSE.md' file in the root directory of this source tree.
+#
+
+
+networks:
+  dev1-net:                       # Define a network key ID reference by the service (advice make it the same as in  the Network name below)
+    external: true                # true: network is created by user or already exists. false docker will create this network with your 
+    name: dev1-net                # Actual Network name as was/will be defined
+    driver: bridge 
+    ipam:
+      config:
+        - subnet: ${FIXED_SUBNET}
+
+# 1) Explanation 'external'
+# external: false → Docker Compose creates the network automatically using IP defined in .env
+#
+# Changes this to 'true' in case you need other in depended (defined in other compose files)  Docker-services
+# to access the service defined here. In that case you need:
+#
+#   1) Set the name network name(dev1-net) also in the other Docker compose file 
+#   2) Set the external in the other compose file to true
+#   3) Use the same network Subnets(defined in .env file) in both services
+#   4) start network manually before starting any of the services (make sure to use the correct sub network)
+#
+#       Example: docker network create --subnet=${FIXED_SUBNET} dev1-net
+#
+#   Test if both are on the same network: docker network inspect dev1-net
+#   To Test the used IP address inside the container enter: hostname -I
+
+
+services:
+  
+  mariadb:
+#    image: mariadb:10.7.8                   # Not supported ended 2023 
+#    image: mariadb:10.11                    # LTS Till Feb. 2028. Minimal risk and very stable behavior (fallback)
+    image: mariadb:11.8.2                    # LTS June 2030. top of the bill(as of 2025), newest features, performance improvements,
+    networks:    
+        dev1-net:                           # Use this Network
+            ipv4_address: ${FIXED_IP3}      # Use a fixed IP3 address for this container service
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_DATABASE: docker
+      MARIADB_USER: docker
+      MARIADB_PASSWORD: docker
+    ports:
+      - "9004:3306"
+    volumes:
+      - mariadb:/var/lib/mysql
+     
+    
+  phpmyadmin:
+    build:
+      context: ./docker/phpmyadmin
+    restart: "no"
+    networks:    
+        dev1-net:                            # Use this Network (SAME for both)
+            ipv4_address: ${FIXED_IP4}       # Use a fixed IP4 address for this container service
+    ports:
+      - "9001:80"
+    environment:
+      PMA_HOST: mariadb
+      PMA_USER: root
+      PMA_PASSWORD: root
+      UPLOAD_LIMIT: 2G
+      MEMORY_LIMIT: 2G
+      MAX_EXECUTION_TIME: 7200
+    volumes:
+      - /var/www/html
+    depends_on:
+      - mariadb
+
+
+volumes:
+  mariadb:
+
+# Create
+# docker compose -f compose.yaml up -d --build --force-recreate  --remove-orphans
+# Start
+# docker compose -f compose.yaml up -d
