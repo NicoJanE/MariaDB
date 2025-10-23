@@ -11,4 +11,4 @@ _This source code is licensed under the MIT License found in the  'LICENSE.md' f
 
 ## Setup Instruction
 
-For details on creating and using this container, see: [setup.md](./Howtos/setup)
+For details on creating and using this container, see: [setup.md](https://github.com/NicoJanE/MariaDB/tree/master/Howtos)
