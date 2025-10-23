@@ -8,7 +8,7 @@ This is a **Maria DB** Supporting container, by default using our default *Exter
 <details>  
   <summary class="clickable-summary">
   <span  class="summary-icon"></span> <!-- Square Symbol -->
-  <b>What's in the external network</b>
+  <b>What's in the external network?</b>
   </summary>
   
 > It can be useful to know what container, IPv4 addresses and ports are used in a network
