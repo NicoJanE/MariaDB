@@ -5,7 +5,7 @@ This is a **Maria DB** Supporting container.
 
 ## Setup Instruction
 
-For details on creating and using this container, see: [setup.md](https://github.com/NicoJanE/MariaDB/tree/master/Howtos/setup)
+For details on creating and using this container, see: [setup.md](https://nicojane.github.io/MariaDB/Howtos/setup)
 
 
 <br><br>
