@@ -1,5 +1,5 @@
 
-# MariaDB <span style="color: #409EFF; font-size: 0.6em; font-style: italic;"> -  Docker Setup & Usage Guide</span>
+# MariaDB <span style="color: #409EFF; font-size: 0.6em; font-style: italic;"> -  Docker Support Container</span>
 
 ## ℹ️ Introduction
 
@@ -17,7 +17,10 @@ For this we have a script that displays the information for you. it can be found
 
 ## ⚡Setup
 
-For details on creating and using this container, see: [Setup](https://nicojane.github.io/MariaDB/Howtos/setup)
+For details on creating and using this container
+
+- Click here for the general page: [General](https://nicojane.github.io/MariaDB/Howtos/setup)
+- Or click here to go to the Setup page direct: [Setup](https://nicojane.github.io/MariaDB/Howtos/setup)
 
 ### ⚡Quick Setup
 
