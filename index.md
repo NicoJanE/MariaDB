@@ -25,7 +25,6 @@ This is a **Maria DB** Supporting container, by default using our default *Exter
 For this we have a script that displays the information for you. it can be found in my **PowerShell-Utilities** repository [here](https://github.com/NicoJanE/Powershell-Utilities). Use the `docker-netw-info` directory to execute the script.
 </details>
 
-
 ## ⚡Setup & Usage Guide
 
 For details on creating and using this container click: [**setup & usage**](https://nicojane.github.io/MariaDB/Howtos/setup)

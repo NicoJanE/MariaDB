@@ -7,6 +7,7 @@ RefPages:
 
 # MariaDB and phpMyAdmin <span style="color: #409EFF; font-size: 0.6em; font-style: italic;"> -  Docker Setup & Usage Guide</span>
 
+## ℹ️ Introduction
 
 This guide explains how to set up and access a MariaDB database with phpMyAdmin using Docker Compose.
 It also describes how to connect other containers or external applications to the same database service.
@@ -20,8 +21,7 @@ It can be useful to know what containe, IP4 addresses and ports are used in a ne
 For this I have a script that displays the information for you. it can be found in my **Powershelll-Utilities** repository [**here**](https://github.com/NicoJanE/Powershell-Utilities). Use the `docker-netw-info` directory to execute the scrip
 </details>
 
-
-## Quick Setup
+## ⚡🏃‍♂️ Quick Setup
 
 1. **Make sure the external network exists (or create it)**
 
@@ -39,7 +39,7 @@ For this I have a script that displays the information for you. it can be found 
 
 ---
 
-## Usage
+## ▶️ Usage
 
 ### Default Credentials
 
