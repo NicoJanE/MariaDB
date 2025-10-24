@@ -22,7 +22,7 @@ For details on creating and using this container
 - Click here for the general page: [General](https://nicojane.github.io/MariaDB/Howtos/setup)
 - Or click here to go to the Setup page direct: [Setup](https://nicojane.github.io/MariaDB/Howtos/setup)
 
-### ⚡Quick Setup
+### ⚡🏃‍♂️Quick Setup
 
 - `docker network create --subnet=172.40.0.0/24 dev1-net`
 - `docker compose -f compose.yaml up -d --build --force-recreate --remove-orphans`

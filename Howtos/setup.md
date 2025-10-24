@@ -9,16 +9,15 @@ RefPages:
 
 ## ℹ️ Introduction
 
-This guide explains how to set up and access a MariaDB database with phpMyAdmin using Docker Compose.
-It also describes how to connect other containers or external applications to the same database service.
+This guide explains how to set up and access a MariaDB database with phpMyAdmin using Docker Compose.By default this container uses our default External Docker network settings, to make sure containers in this network can work together.
 
 <details>  
   <summary class="clickable-summary">
   <span  class="summary-icon"></span> <!-- Square Symbol -->
   <b>What's in my network</b>
   </summary>
-It can be useful to know what containe, IP4 addresses and ports are used in a network
-For this I have a script that displays the information for you. it can be found in my **Powershelll-Utilities** repository [**here**](https://github.com/NicoJanE/Powershell-Utilities). Use the `docker-netw-info` directory to execute the scrip
+It can be useful to know what container, IPv4 addresses and ports are used in a network
+For this we have a script that displays the information for you. it can be found in my **Powershelll-Utilities** repository [**here**](https://github.com/NicoJanE/Powershell-Utilities). Use the `docker-netw-info` directory to execute the script
 </details>
 
 ## ⚡🏃‍♂️ Quick Setup

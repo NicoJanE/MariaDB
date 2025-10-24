@@ -13,7 +13,7 @@ _This source code is licensed under the MIT License found in the  'LICENSE.md' f
 
 ## ℹ️ Introduction
 
-This is a **Maria DB** Supporting container, by default using our default *External Docker network* settings
+This is a **Maria DB** Supporting container, by default this container uses our default External Docker network settings, to make sure containers in this network can work together.
 
 <details>  
   <summary class="clickable-summary">
